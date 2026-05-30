@@ -22,4 +22,4 @@ services:
         destination: /index.html
     envVars:
       - key: BACKEND_URL
-        value: https://sentiment-analysis-backend.onrender.com
+        value: https://sentiment-analysis-backend-47jb.onrender.com
