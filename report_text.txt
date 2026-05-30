@@ -1,0 +1,266 @@
+=== PAGE 1 ===
+P.E.S. COLLEGE OF ENGINEERING, 
+(An Autonomous Institute under Visvesvaraya Technological University, Belagavi)  
+MANDYA-571401  
+ 
+ 
+ 
+ 
+MINI PROJECT  REPORT ON  
+“Analysis of Sentiment Detection Tool”  
+Submitted in partial fulfilment of the requirement 
+For the award of the 
+BACHELOR OF ENGINEERING DEGREE 
+ 
+Submitted by 
+ 
+                                        Thrishool M S                                  4PS23EC167 
+Nagapooja G S                                4PS23EC081    
+ Gagan N T                                       4PS23EC033 
+Thanushree M S                         4PS23EC186        
+     
+ 
+Under the guidance of  
+Dr. M J Anand 
+ Associate Professor  
+  
+  
+  
+  
+  
+Department of Electronics and Communication Engineering 
+                                 P.E.S. College of Engineering 
+                                Mandya  2025-2026 
+ 
+
+
+=== PAGE 2 ===
+ 
+ 
+ Abstract 
+ 
+This project presents a machine-learning-based Sentiment Analysis Tool  
+designed to classify user-generated text as positive, negative,  or neutral. 
+With the rapid growth of social media, customer reviews and online 
+feedback systems, understanding public opinion automatically has become 
+essential for businesses, organizations and research communities. Manual 
+analysis of large-scale text data is time-consuming, inaccurate and highly 
+subjective. 
+The proposed system uses pre-trained transformer models such as BERT 
+and RoBERTa  to analyse sentence-level sentiments with high accuracy. A 
+lightweight web interface is implemented, allowing users to enter text, 
+submit it for analysis and instantly view the sentiment classification. 
+Additionally, the tool supports visual sentiment analytics , where trends are 
+plotted in the form of charts or graphs. This system provides efficient, real-
+time sentiment insights and can be adapted for tweets, reviews or custom 
+datasets. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 3 ===
+ 
+ 
+  
+ 
+ 
+ 
+ 
+  INDEX  
+INDEX NO DESCRIPTION PAGE NO 
+1 Introduction 1 
+2 Literature Survey 2 
+3 Problem Statement 3 
+4 Objectives 4 
+5 System Block Diagram / Methodology 5 
+6 Flow Chart with Working Mechanism 6 
+7 Expected Outcome 7 
+8 References 7 
+9 Feedback Form 8 
+
+=== PAGE 4 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  1  
+Introduction 
+ 
+Sentiment analysis, often called opinion mining, is a widely used AI 
+technique for determining the emotional tone behind textual data. With the 
+explosion of social media platforms, people openly express their opinions 
+about products, movies, services and public events. Analysing this data 
+manually becomes unrealistic when millions of posts are generated every 
+minute. 
+Traditional machine learning techniques like Naive Bayes and SVM have 
+shown moderate performance but fail to capture contextual meaning, 
+sarcasm and linguistic variations. Modern transformer-based models such as 
+BERT, RoBERTa  and DistilBERT  provide state-of-the-art text 
+understanding, enabling more accurate sentiment classification. 
+The goal of this project is to design a simple, scalable and user-friendly web-
+based sentiment analysis tool  that processes user input, classifies the 
+sentiment and displays outputs along with visual graphs. The tool can be 
+used for social media monitoring, customer feedback evaluation, product 
+review analysis and academic research involving opinion studies  
+ 
+ 
+ 
+ 
+ 
+  
+
+=== PAGE 5 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  2  
+Literature Survey 
+ 
+Sentiment analysis has been extensively studied due to its importance in 
+natural language processing (NLP) applications. Early research by Pang & 
+Lee (2002) introduced machine-learning techniques for movie review 
+polarity detection, demonstrating that SVMs outperform traditional rule-
+based methods. Liu B. (2012) explored opinion mining and sentiment 
+classification techniques, highlighting the challenges in handling ambiguity 
+and subjectivity. 
+The introduction of transformer models revolutionized NLP. Devlin et al. 
+(2019) presented BERT (Bidirectional Encoder Representations from 
+Transformers) , which significantly improved sentiment classification 
+accuracy through contextual embeddings. Later, Liu et al. (2019) proposed 
+RoBERTa , an optimized training approach achieving better performance on 
+several benchmark sentiment datasets. 
+Recent advancements include sentiment visualization tools and dashboards 
+for customer behaviour analysis. Studies also show that domain-adapted 
+models outperform generic sentiment classifiers when applied to specialized 
+categories such as medical reviews or financial sentiment. The proposed 
+project incorporates these modern techniques by using pre-trained 
+transformer models and a web-based interactive interface for real-time 
+sentiment evaluation. 
+
+=== PAGE 6 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  3  
+Problem Statement 
+ 
+With the rapid growth of digital communication, users frequently post 
+opinions, reviews and feedback online. However, organizations and 
+researchers struggle to manually process large volumes of text data to 
+understand public sentiment. Traditional sentiment analysis models lack 
+contextual understanding and often produce inaccurate results when exposed 
+to slang, sarcasm or complex sentence structures. 
+There is a need for a modern, AI-powered sentiment analysis tool  capable 
+of understanding context, providing accurate sentiment classification and 
+visualizing trends over time. Existing tools are either domain-specific, 
+require technical expertise, or charge subscription fees. Therefore, a 
+customizable, user-friendly sentiment analysis system is required to analyze 
+text from tweets, reviews and general user input in real-time. 
+ 
+
+=== PAGE 7 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  4  
+Objectives 
+ 
+1. To study and analyze  existing sentiment analysis techniques, including 
+traditional machine learning approaches and modern transformer-based 
+models such as BERT and RoBERTa . 
+2. To implement a sentiment analysis system  using pre-trained transformer 
+models capable of classifying text into positive, negative, or 
+neutral categories with high accuracy. 
+3. To evaluate the performance  of the implemented models using standard 
+classification metrics such as accuracy, precision, recall, and F1-score , 
+and identify the most suitable model for real-time sentiment analysis. 
+4. To develop a user-friendly web interface  that allows users to input text 
+and receive instant sentiment predictions along with confidence scores. 
+5. To incorporate data visualization  to represent sentiment trends and 
+distributions using graphical formats such as bar charts and pie charts  for 
+better interpretability. 
+6. To test the system  on diverse datasets including social media posts, product 
+reviews, and custom user inputs to ensure consistency and robustness across 
+different text domains. 
+ 
+
+=== PAGE 8 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  5  
+ 
+System Block Diagram / Methodology 
+ 
+Workflow:  
+1. User enters text (review, tweet or sentence) into the web interface. 
+2. The text is pre-processed: tokenization, cleaning and normalization. 
+3. A pre-trained transformer model (BERT/RoBERTa) predicts the 
+sentiment. 
+4. Backend processes the output and returns a sentiment label 
+(positive/negative/neutral). 
+5. Sentiment results are stored temporarily for visualization. 
+6. Charts/graphs display sentiment distribution and trends to the user. 
+  
+
+=== PAGE 9 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  6  
+Flow Chart with Working Mechanism 
+ 
+ 
+ 
+ 
+
+=== PAGE 10 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  7 Expected Outcome 
+ A fully functional real-time sentiment analysis tool . 
+ Accurate sentiment predictions powered by transformer-based AI 
+models. 
+ A simple and responsive web interface for sentiment input. 
+ Visualization of sentiment insights using line charts, pie charts or bar 
+graphs. 
+ Ability to analyse tweets, reviews or custom user inputs. 
+ Extendable framework for future domain-specific sentiment analysis 
+applications. 
+ 
+References 
+ B. Pang, L. Lee , “Opinion Mining and Sentiment Analysis,” 
+Foundations and Trends in Information Retrieval , Vol. 2, No. 1–2, pp. 
+1–135, 2008. 
+ B. Liu, Sentiment Analysis and Opinion Mining , Morgan & Claypool 
+Publishers, 2012. 
+ J. Devlin, M. Chang, K. Lee, K. Toutanova, “BERT : Pre-training of 
+Deep Bidirectional Transformers for Language Understanding,” 
+NAACL-HLT , 2019. 
+ Y. Liu et al., “RoBERTa:  A Robustly Optimized BERT Pretraining 
+Approach,” arXiv preprint arXiv:1907.11692 , 2019. 
+ 
+ 
+
+=== PAGE 11 ===
+ Sentiment Analysis Tool 
+ 
+Dept. of ECE, PESCE, Mandya  2025–2026  8  
+Feedback Form 
+ 
+• The synopsis is formatted as per the template.                       Yes/No. 
+• Objectives and problem statement are properly formulated.  Yes/No. 
+• Picture-diagrams-tables are numbered properly.                    Yes/No. 
+• Syntax and Grammar usage is standard.                                 Yes/No. 
+• References are cited properly and listed in order.                   Yes/No. 
+• Remarks and comments. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Signature of the Guide                      Signature of the Mini-Project Coordinator 
+
