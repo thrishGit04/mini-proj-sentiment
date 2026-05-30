@@ -5,6 +5,7 @@ import os
 import logging
 import re
 import time
+import math
 from model import CustomDistilBertForClassification
 
 logging.basicConfig(level=logging.INFO)
@@ -143,9 +144,14 @@ class SentimentInference:
         positive_score = sum(1 for word in self.positive_words if word in text_lower)
         negative_score = sum(1 for word in self.negative_words if word in text_lower)
         
-        total = positive_score + negative_score + 1
-        prob_positive_raw = (positive_score + 0.5) / total
-        prob_negative_raw = (negative_score + 0.5) / total
+        diff = positive_score - negative_score
+        
+        # Exponential scaling to map score difference to realistic probability margins
+        exp_pos = math.exp(1.5 * diff)
+        exp_neg = math.exp(-1.5 * diff)
+        
+        prob_positive_raw = exp_pos / (exp_pos + exp_neg)
+        prob_negative_raw = exp_neg / (exp_pos + exp_neg)
         return prob_positive_raw, prob_negative_raw
     
     def _split_into_clauses(self, text):
