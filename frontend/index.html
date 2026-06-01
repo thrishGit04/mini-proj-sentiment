@@ -93,6 +93,7 @@
                 <div class="confidence-main">
                     <span class="confidence-value" id="confidence-value">95.2%</span>
                     <span class="confidence-text">confidence</span>
+                    <span class="confidence-level-badge conf-high" id="confidence-level">High Confidence</span>
                 </div>
             </div>
             <!-- Breakdown bars -->
@@ -136,11 +137,13 @@
             </div>
             <div class="charts-grid">
                 <div class="chart-box">
-                    <h3>Sentiment Distribution</h3>
+                    <h3>📊 Sentiment Distribution</h3>
+                    <p class="chart-subtitle">Count breakdown across all analyses</p>
                     <canvas id="pie-chart"></canvas>
                 </div>
                 <div class="chart-box">
-                    <h3>Confidence Comparison</h3>
+                    <h3>📈 Confidence Comparison</h3>
+                    <p class="chart-subtitle">Last 10 predictions — colored by sentiment</p>
                     <canvas id="bar-chart"></canvas>
                 </div>
             </div>
