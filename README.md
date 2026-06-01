@@ -3,7 +3,7 @@
 A premium, full-stack sentiment analysis application designed with a cyber-dark theme and glassmorphism UI. It uses a custom-trained PyTorch transformer model based on DistilBERT fine-tuned on the IMDb Movie Reviews dataset.
 
 ## Live Demo
-*Link to your Render URL after deployment: [https://sentiment-analysis-frontend.onrender.com](https://sentiment-analysis-frontend.onrender.com)*
+*Link to your Render URL after deployment: [https://sentiment-analysis-frontend-0q5l.onrender.com](https://sentiment-analysis-frontend-0q5l.onrender.com)*
 
 ---
 
